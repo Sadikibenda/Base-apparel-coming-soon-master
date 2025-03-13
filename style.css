@@ -79,5 +79,116 @@ button{
     box-shadow: 0 5px 10px hsl(0, 36%, 70%);
 }
 
+#error{
+    text-align: center;
+    font-size: 10px;
+    color: red;
+    visibility: hidden;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    margin-left: 20px;
+}
+
+.invalid + .error{
+    visibility: visible;
+}
+
+input.invalid{
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+/* media queries desktop */
+
+@media (min-width: 768px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 12px;
+        max-height: 100vh;
+    }
+
+    .logo, .container{
+        grid-column: 1;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .hero-mobile{
+        display: none;
+    }
+
+    .logo{
+        margin-top: 100px;
+        margin-left: 150px;
+    }
+
+    .hero-desktop{
+        display: grid;
+        grid-column: 1.5;
+        grid-row: span 2;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        text-align: left;
+        margin-left: 150px;
+        font-size: 5.5em;
+        line-height: 70px;
+        letter-spacing: 20px;
+        font-weight: 400;
+    }
+
+    p{
+        text-align: left;
+        padding-left: 150px;
+        padding-right: 150px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    form{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    input{
+        width: 50%;
+    }
+
+    button{
+        padding: 16px 40px;
+        background-color: hsl(0, 36%, 70%);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        position: absolute;
+        right: 160px;
+        box-shadow: 0 5px 10px hsl(0, 36%, 70%);
+    }
+
+    #error{
+        text-align: center;
+        font-size: 10px;
+        color: red;
+        visibility: hidden;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        margin-left: 200px;
+    }
+}
+
 
 
