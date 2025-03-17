@@ -1,13 +1,13 @@
 
 const form = document.querySelector('#form');
 const email = document.querySelector('#email');
-
+const errorMessage = document.querySelector('#error');
 
 
 // Function to validate input with custom error messages
 
 function validateInput(input){
-    const errorMessage = document.querySelector('#error');
+    
     const inputValue = input.value.trim();
 
     if (!inputValue){
@@ -18,14 +18,16 @@ function validateInput(input){
         return false;
     } 
 
-    
+    if (!inputValue.includes('@') || !inputValue.includes('.')){
+        errorMessage.style.visibility = 'visible';
 
-    // If the input is valid, remove the error message and invalid class
+        input.classList.add('invalid');
+        errorMessage.style.visibility = 'visible';
+        return false;
+    }
     
 
 }
-
-
 
 
 // Event listener to validate input
@@ -34,5 +36,6 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 
     validateInput(email);
+    
 })
 
