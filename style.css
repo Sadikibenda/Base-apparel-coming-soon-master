@@ -90,6 +90,13 @@ button{
     margin-left: 20px;
 }
 
+#error-icon{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 180px;
+    visibility: hidden;
+}
+
 .invalid + .error{
     visibility: visible;
 }
@@ -187,6 +194,13 @@ input.invalid{
         bottom: -20px;
         left: 0;
         margin-left: 200px;
+    }
+
+    #error-icon{
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 240px;
+        visibility: hidden;
     }
 }
 

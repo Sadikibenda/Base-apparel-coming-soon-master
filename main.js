@@ -2,6 +2,7 @@
 const form = document.querySelector('#form');
 const email = document.querySelector('#email');
 const errorMessage = document.querySelector('#error');
+const errorIcon = document.querySelector('#error-icon');
 
 
 // Function to validate input with custom error messages
@@ -12,6 +13,7 @@ function validateInput(input){
 
     if (!inputValue){
         errorMessage.style.visibility = 'visible';
+        errorIcon.style.visibility = 'visible';
 
         input.classList.add('invalid');
         errorMessage.style.visibility = 'visible';
